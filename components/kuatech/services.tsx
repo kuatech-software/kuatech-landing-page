@@ -3,7 +3,7 @@ import { BentoCard } from './bento-card'
 import { NodeGraph } from './node-graph'
 import { ServerMetrics } from './server-metrics'
 
-const stackTags = ['Next.js', 'React Native', 'TypeScript', 'Node.js', 'PostgreSQL', 'Flutter']
+const stackTags = ['.NET', 'Angular', 'React', 'TypeScript', 'SQL Server', 'PostgreSQL']
 
 export function Services() {
   return (

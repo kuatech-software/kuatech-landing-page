@@ -1,10 +1,14 @@
 import { SectionHeading } from './section-heading'
 
 const groups = [
-  { name: 'Frontend', accent: 'orange', items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'] },
-  { name: 'Mobile', accent: 'green', items: ['React Native', 'Flutter'] },
-  { name: 'Backend', accent: 'orange', items: ['.NET', 'Node.js', 'PostgreSQL', 'APIs REST'] },
-  { name: 'Cloud y DevOps', accent: 'green', items: ['AWS', 'Docker', 'CI/CD', 'Infraestructura como código'] },
+  { name: 'Backend', accent: 'orange', items: ['.NET', 'C#', 'APIs REST', 'Microservicios'] },
+  {
+    name: 'Frontend y Mobile',
+    accent: 'green',
+    items: ['Angular', 'React', 'Next.js', 'TypeScript', 'Apps multiplataforma'],
+  },
+  { name: 'Datos', accent: 'orange', items: ['SQL Server', 'PostgreSQL', 'Entity Framework', 'Dapper'] },
+  { name: 'Cloud y DevOps', accent: 'green', items: ['Azure', 'Docker', 'CI/CD', 'GitHub Actions'] },
 ] as const
 
 export function Technologies() {

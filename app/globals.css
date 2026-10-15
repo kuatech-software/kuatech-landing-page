@@ -104,6 +104,22 @@
   }
 }
 
+@keyframes float-shadow {
+  0%,
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(0.82);
+    opacity: 0.6;
+  }
+}
+
+@utility animate-float-shadow {
+  animation: float-shadow 6s ease-in-out infinite;
+}
+
 @utility animate-pulse-dot {
   animation: pulse-dot 2.4s ease-in-out infinite;
 }
@@ -117,7 +133,8 @@
     scroll-behavior: auto;
   }
   .animate-pulse-dot,
-  .animate-float {
+  .animate-float,
+  .animate-float-shadow {
     animation: none;
   }
 }

@@ -58,32 +58,32 @@ export function Hero() {
           </dl>
         </div>
 
-        <div className="relative mx-auto w-full max-w-2xl">
+        <div className="relative mx-auto w-full max-w-[260px] sm:max-w-xs lg:max-w-sm">
+          {/* Glows: naranja detrás de la cola, verde del lado de la laptop */}
           <div
             aria-hidden="true"
-            className="absolute inset-6 rounded-full bg-brand-orange/30 blur-3xl"
+            className="absolute top-[5%] -left-[15%] size-[70%] rounded-full bg-brand-orange/30 blur-3xl"
           />
           <div
             aria-hidden="true"
-            className="absolute -bottom-6 -left-6 size-40 rounded-full bg-brand-green/20 blur-3xl"
+            className="absolute top-[30%] -right-[15%] size-[65%] rounded-full bg-brand-green/20 blur-3xl"
           />
-          <div className="animate-float relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-3 shadow-2xl backdrop-blur-xl">
-            <div className="flex items-center gap-1.5 px-2 pb-3">
-              <span className="size-2.5 rounded-full bg-white/15" />
-              <span className="size-2.5 rounded-full bg-white/15" />
-              <span className="size-2.5 rounded-full bg-white/15" />
-              <span className="ml-3 font-mono text-xs text-muted-foreground">kuatech.brand</span>
-            </div>
-            <div className="relative aspect-[1408/768] overflow-hidden rounded-2xl border border-white/5 bg-background">
-              <Image
-                src="/images/kuatech-brand.jpg"
-                alt="Kuatech software factory: un coatí 3D con lentes de realidad aumentada y cola rayada luminosa, programando en una laptop sobre un chip de circuito"
-                fill
-                priority
-                sizes="(min-width: 1024px) 672px, 90vw"
-                className="object-cover"
-              />
-            </div>
+
+          <div className="relative">
+            <Image
+              src="/images/kuati-ar-hero.webp"
+              alt="Kuati, la mascota de Kuatech: un coatí 3D con lentes de realidad aumentada y cola rayada luminosa, programando en una laptop"
+              width={484}
+              height={470}
+              priority
+              sizes="(min-width: 1024px) 384px, (min-width: 640px) 320px, 260px"
+              className="animate-float relative h-auto w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            />
+            {/* Sombra de piso que acompaña la flotación */}
+            <div
+              aria-hidden="true"
+              className="animate-float-shadow mx-auto -mt-4 h-5 w-3/5 rounded-[50%] bg-black/60 blur-lg"
+            />
           </div>
         </div>
       </div>

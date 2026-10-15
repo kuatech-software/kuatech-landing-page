@@ -1,0 +1,178 @@
+diff --git a/app/globals.css b/app/globals.css
+index 1b24535..851bf09 100644
+--- a/app/globals.css
++++ b/app/globals.css
+@@ -104,6 +104,22 @@
+   }
+ }
+ 
++@keyframes float-shadow {
++  0%,
++  100% {
++    transform: scaleX(1);
++    opacity: 1;
++  }
++  50% {
++    transform: scaleX(0.82);
++    opacity: 0.6;
++  }
++}
++
++@utility animate-float-shadow {
++  animation: float-shadow 6s ease-in-out infinite;
++}
++
+ @utility animate-pulse-dot {
+   animation: pulse-dot 2.4s ease-in-out infinite;
+ }
+@@ -117,7 +133,8 @@
+     scroll-behavior: auto;
+   }
+   .animate-pulse-dot,
+-  .animate-float {
++  .animate-float,
++  .animate-float-shadow {
+     animation: none;
+   }
+ }
+diff --git a/components/kuatech/hero.tsx b/components/kuatech/hero.tsx
+index a1091b9..9918b7a 100644
+--- a/components/kuatech/hero.tsx
++++ b/components/kuatech/hero.tsx
+@@ -58,32 +58,32 @@ export function Hero() {
+           </dl>
+         </div>
+ 
+-        <div className="relative mx-auto w-full max-w-2xl">
++        <div className="relative mx-auto w-full max-w-[260px] sm:max-w-xs lg:max-w-sm">
++          {/* Glows: naranja detrás de la cola, verde del lado de la laptop */}
+           <div
+             aria-hidden="true"
+-            className="absolute inset-6 rounded-full bg-brand-orange/30 blur-3xl"
++            className="absolute top-[5%] -left-[15%] size-[70%] rounded-full bg-brand-orange/30 blur-3xl"
+           />
+           <div
+             aria-hidden="true"
+-            className="absolute -bottom-6 -left-6 size-40 rounded-full bg-brand-green/20 blur-3xl"
++            className="absolute top-[30%] -right-[15%] size-[65%] rounded-full bg-brand-green/20 blur-3xl"
+           />
+-          <div className="animate-float relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-3 shadow-2xl backdrop-blur-xl">
+-            <div className="flex items-center gap-1.5 px-2 pb-3">
+-              <span className="size-2.5 rounded-full bg-white/15" />
+-              <span className="size-2.5 rounded-full bg-white/15" />
+-              <span className="size-2.5 rounded-full bg-white/15" />
+-              <span className="ml-3 font-mono text-xs text-muted-foreground">kuatech.brand</span>
+-            </div>
+-            <div className="relative aspect-[1408/768] overflow-hidden rounded-2xl border border-white/5 bg-background">
+-              <Image
+-                src="/images/kuatech-brand.jpg"
+-                alt="Kuatech software factory: un coatí 3D con lentes de realidad aumentada y cola rayada luminosa, programando en una laptop sobre un chip de circuito"
+-                fill
+-                priority
+-                sizes="(min-width: 1024px) 672px, 90vw"
+-                className="object-cover"
+-              />
+-            </div>
++
++          <div className="relative">
++            <Image
++              src="/images/kuati-ar-hero.webp"
++              alt="Kuati, la mascota de Kuatech: un coatí 3D con lentes de realidad aumentada y cola rayada luminosa, programando en una laptop"
++              width={484}
++              height={470}
++              priority
++              sizes="(min-width: 1024px) 384px, (min-width: 640px) 320px, 260px"
++              className="animate-float relative h-auto w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
++            />
++            {/* Sombra de piso que acompaña la flotación */}
++            <div
++              aria-hidden="true"
++              className="animate-float-shadow mx-auto -mt-4 h-5 w-3/5 rounded-[50%] bg-black/60 blur-lg"
++            />
+           </div>
+         </div>
+       </div>
+diff --git a/components/kuatech/logo.tsx b/components/kuatech/logo.tsx
+index ecd94fa..121af23 100644
+--- a/components/kuatech/logo.tsx
++++ b/components/kuatech/logo.tsx
+@@ -6,15 +6,9 @@ export function Logo() {
+     <Link href="/" className="group flex items-center gap-2.5" aria-label="Kuatech, inicio">
+       <span
+         aria-hidden="true"
+-        className="relative size-9 overflow-hidden rounded-lg border border-brand-orange/40 bg-[#7a2e12] shadow-[0_0_16px_-4px_rgba(255,107,0,0.6)] transition-shadow group-hover:shadow-[0_0_22px_-2px_rgba(255,107,0,0.7)]"
++        className="relative size-10 shrink-0 rounded-full shadow-[0_0_16px_-4px_rgba(255,107,0,0.6)] transition-shadow group-hover:shadow-[0_0_22px_-2px_rgba(255,107,0,0.75)]"
+       >
+-        <Image
+-          src="/images/kuatech-brand.jpg"
+-          alt=""
+-          fill
+-          sizes="96px"
+-          className="origin-[39%_38%] scale-[2.6] object-cover"
+-        />
++        <Image src="/images/kuati-avatar.webp" alt="" fill sizes="40px" className="object-contain" />
+       </span>
+       <span className="flex flex-col leading-none">
+         <span className="text-lg font-bold tracking-tight text-brand-orange">Kuatech</span>
+diff --git a/components/kuatech/server-metrics.tsx b/components/kuatech/server-metrics.tsx
+index 9e88a37..a92be62 100644
+--- a/components/kuatech/server-metrics.tsx
++++ b/components/kuatech/server-metrics.tsx
+@@ -1,7 +1,7 @@
+ const regions = [
+-  { name: 'us-east-1', cpu: 42, latency: '18ms' },
+-  { name: 'sa-east-1', cpu: 67, latency: '24ms' },
+-  { name: 'eu-west-1', cpu: 31, latency: '41ms' },
++  { name: 'eastus', cpu: 42, latency: '18ms' },
++  { name: 'brazilsouth', cpu: 67, latency: '24ms' },
++  { name: 'westeurope', cpu: 31, latency: '41ms' },
+ ]
+ 
+ const bars = [28, 45, 38, 60, 52, 70, 48, 64, 58, 76, 62, 84, 70, 66, 80, 72]
+diff --git a/components/kuatech/services.tsx b/components/kuatech/services.tsx
+index afbc031..2676d30 100644
+--- a/components/kuatech/services.tsx
++++ b/components/kuatech/services.tsx
+@@ -3,7 +3,7 @@ import { BentoCard } from './bento-card'
+ import { NodeGraph } from './node-graph'
+ import { ServerMetrics } from './server-metrics'
+ 
+-const stackTags = ['Next.js', 'React Native', 'TypeScript', 'Node.js', 'PostgreSQL', 'Flutter']
++const stackTags = ['.NET', 'Angular', 'React', 'TypeScript', 'SQL Server', 'PostgreSQL']
+ 
+ export function Services() {
+   return (
+diff --git a/components/kuatech/technologies.tsx b/components/kuatech/technologies.tsx
+index 2aa642d..30c43a1 100644
+--- a/components/kuatech/technologies.tsx
++++ b/components/kuatech/technologies.tsx
+@@ -1,10 +1,14 @@
+ import { SectionHeading } from './section-heading'
+ 
+ const groups = [
+-  { name: 'Frontend', accent: 'orange', items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'] },
+-  { name: 'Mobile', accent: 'green', items: ['React Native', 'Flutter'] },
+-  { name: 'Backend', accent: 'orange', items: ['.NET', 'Node.js', 'PostgreSQL', 'APIs REST'] },
+-  { name: 'Cloud y DevOps', accent: 'green', items: ['AWS', 'Docker', 'CI/CD', 'Infraestructura como código'] },
++  { name: 'Backend', accent: 'orange', items: ['.NET', 'C#', 'APIs REST', 'Microservicios'] },
++  {
++    name: 'Frontend y Mobile',
++    accent: 'green',
++    items: ['Angular', 'React', 'Next.js', 'TypeScript', 'Apps multiplataforma'],
++  },
++  { name: 'Datos', accent: 'orange', items: ['SQL Server', 'PostgreSQL', 'Entity Framework', 'Dapper'] },
++  { name: 'Cloud y DevOps', accent: 'green', items: ['Azure', 'Docker', 'CI/CD', 'GitHub Actions'] },
+ ] as const
+ 
+ export function Technologies() {
+diff --git a/package.json b/package.json
+index 5c365bd..09a7c06 100644
+--- a/package.json
++++ b/package.json
+@@ -1,5 +1,5 @@
+ {
+-  "name": "my-project",
++  "name": "kuatech-landing-page",
+   "version": "0.1.0",
+   "private": true,
+   "packageManager": "pnpm@12.3.4",

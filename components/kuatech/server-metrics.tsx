@@ -1,7 +1,7 @@
 const regions = [
-  { name: 'us-east-1', cpu: 42, latency: '18ms' },
-  { name: 'sa-east-1', cpu: 67, latency: '24ms' },
-  { name: 'eu-west-1', cpu: 31, latency: '41ms' },
+  { name: 'eastus', cpu: 42, latency: '18ms' },
+  { name: 'brazilsouth', cpu: 67, latency: '24ms' },
+  { name: 'westeurope', cpu: 31, latency: '41ms' },
 ]
 
 const bars = [28, 45, 38, 60, 52, 70, 48, 64, 58, 76, 62, 84, 70, 66, 80, 72]
