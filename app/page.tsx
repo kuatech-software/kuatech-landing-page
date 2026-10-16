@@ -1,5 +1,7 @@
 import { SiteHeader } from '@/components/kuatech/site-header'
 import { Hero } from '@/components/kuatech/hero'
+import { BeforeAfter } from '@/components/kuatech/before-after'
+import { CtaBand } from '@/components/kuatech/cta-band'
 import { Services } from '@/components/kuatech/services'
 import { Technologies } from '@/components/kuatech/technologies'
 import { Process } from '@/components/kuatech/process'
@@ -16,9 +18,11 @@ export default function Page() {
       <SiteHeader />
       <main id="contenido">
         <Hero />
+        <BeforeAfter />
         <Services />
         <Technologies />
         <Process />
+        <CtaBand />
         <Lab />
         <Engagement />
         <Manifesto />

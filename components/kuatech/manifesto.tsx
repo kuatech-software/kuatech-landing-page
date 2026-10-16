@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const values = [
   { key: 'curiosidad', text: 'Investigamos hasta entender el problema real.' },
   { key: 'agilidad', text: 'Nos movemos rápido sin dejar deuda técnica atrás.' },
@@ -11,30 +13,45 @@ export function Manifesto() {
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 left-1/2 h-72 w-[40rem] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-brand-green/10 to-brand-orange/10 blur-3xl"
       />
-      <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
-        <p className="font-mono text-sm text-brand-orange">{'// manifiesto'}</p>
-        <h2 className="mt-4 text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl">
-          Inspirados en el Kuatí.
-        </h2>
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_minmax(0,380px)] lg:gap-16">
+          <div className="text-center lg:text-left">
+            <p className="font-mono text-sm text-brand-orange">{'// manifiesto'}</p>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl">
+              Inspirados en el Kuatí.
+            </h2>
 
-        <div className="mt-10 space-y-6 text-lg leading-relaxed text-pretty text-muted-foreground sm:text-xl">
-          <p>
-            En las selvas subtropicales de Misiones, el{' '}
-            <span className="font-semibold text-white">Kuatí</span> prospera gracias a una
-            curiosidad incansable, un movimiento ágil y veloz, y un extraordinario sentido de
-            comunidad. Nunca explora solo.
-          </p>
-          <p>
-            Así construimos software. Cuestionamos cada supuesto, nos adaptamos rápido al cambio y
-            trabajamos como un equipo unido, convirtiendo ideas ambiciosas en{' '}
-            <span className="bg-gradient-to-r from-brand-green to-brand-orange bg-clip-text font-semibold text-transparent">
-              ingeniería de primer nivel
-            </span>
-            .
-          </p>
+            <div className="mt-10 space-y-6 text-lg leading-relaxed text-pretty text-muted-foreground sm:text-xl">
+              <p>
+                En las selvas subtropicales de Misiones, el <span className="font-semibold text-white">Kuatí</span>{' '}
+                prospera gracias a una curiosidad incansable, un movimiento ágil y veloz, y un extraordinario sentido de
+                comunidad. Nunca explora solo.
+              </p>
+              <p>
+                Así construimos software. Cuestionamos cada supuesto, nos adaptamos rápido al cambio y trabajamos como
+                un equipo unido, convirtiendo ideas ambiciosas en{' '}
+                <span className="bg-gradient-to-r from-brand-green to-brand-orange bg-clip-text font-semibold text-transparent">
+                  ingeniería de primer nivel
+                </span>
+                .
+              </p>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-56 sm:w-72 lg:w-full">
+            <div aria-hidden="true" className="absolute inset-[10%] rounded-full bg-brand-green/15 blur-3xl" />
+            <Image
+              src="/images/kuati-mate.webp"
+              alt="Kuati tomando mate frente a su laptop, pensando en cómo resolver un problema"
+              width={997}
+              height={1019}
+              sizes="(min-width: 1024px) 380px, (min-width: 640px) 288px, 224px"
+              className="relative h-auto w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            />
+          </div>
         </div>
 
-        <ul className="mt-16 grid gap-4 text-left sm:grid-cols-3">
+        <ul className="mx-auto mt-16 grid max-w-4xl gap-4 text-left sm:grid-cols-3">
           {values.map((v) => (
             <li
               key={v.key}

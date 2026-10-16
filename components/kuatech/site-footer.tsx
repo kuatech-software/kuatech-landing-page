@@ -1,11 +1,18 @@
+import Image from 'next/image'
 import { EMAIL_HREF, SITE, WHATSAPP_HREF } from '@/lib/site'
 import { Logo } from './logo'
 import { navLinks } from './nav-links'
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/5">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3 lg:px-8">
+    <footer className="relative overflow-hidden border-t border-white/5">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 opacity-60 [mask-image:linear-gradient(to_top,black_40%,transparent)] sm:h-52"
+      >
+        <Image src="/images/selva-misionera-footer.webp" alt="" fill sizes="100vw" className="object-cover object-bottom" />
+      </div>
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
           <Logo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -49,7 +56,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-white/5">
+      <div className="relative border-t border-white/5">
         <p className="mx-auto max-w-7xl px-4 py-6 font-mono text-xs text-muted-foreground sm:px-6 lg:px-8">
           {'© '}
           {new Date().getFullYear()} Kuatech — Hecho en Misiones, Argentina.

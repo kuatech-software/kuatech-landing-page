@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { ArrowRight, Mail, MessageCircle } from 'lucide-react'
 import { EMAIL_HREF, SITE, WHATSAPP_HREF } from '@/lib/site'
 
@@ -9,6 +10,14 @@ export function Contact() {
         className="pointer-events-none absolute top-1/2 left-1/2 h-72 w-[40rem] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-brand-green/10 to-brand-orange/10 blur-3xl"
       />
       <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <Image
+          src="/images/kuati-waving.webp"
+          alt="Kuati saludando con un celular en la mano"
+          width={789}
+          height={865}
+          sizes="(min-width: 640px) 176px, 144px"
+          className="mx-auto mb-6 h-auto w-36 drop-shadow-[0_16px_32px_rgba(0,0,0,0.5)] sm:w-44"
+        />
         <p className="font-mono text-sm text-brand-orange">{'// contacto'}</p>
         <h2 className="mt-4 text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl">
           ¿Tenés una idea? Hablemos.
