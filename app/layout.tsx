@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     siteName: 'Kuatech',
     title,
     description,
-    images: [{ url: '/images/kuatech-brand.jpg', width: 1408, height: 768, alt: 'Kuatech software factory' }],
+    images: [{ url: '/images/kuatech-logo.webp', width: 1376, height: 768, alt: 'Kuatech software factory' }],
   },
   twitter: {
     card: 'summary_large_image',
     title,
     description,
-    images: ['/images/kuatech-brand.jpg'],
+    images: ['/images/kuatech-logo.webp'],
   },
   icons: {
     icon: [
