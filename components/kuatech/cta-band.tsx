@@ -16,8 +16,8 @@ export function CtaBand() {
               <Image
                 src="/images/kuati-pointing.webp"
                 alt="Kuati señalando hacia el botón de contacto"
-                width={769}
-                height={862}
+                width={976}
+                height={1094}
                 sizes="(min-width: 1024px) 280px, 208px"
                 className="h-auto w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:-mb-2 lg:pt-8"
               />

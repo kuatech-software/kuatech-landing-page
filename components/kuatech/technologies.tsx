@@ -1,3 +1,4 @@
+import { BentoCard } from './bento-card'
 import { SectionHeading } from './section-heading'
 
 const groups = [
@@ -23,7 +24,7 @@ export function Technologies() {
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {groups.map((group) => (
-            <div key={group.name} className="rounded-2xl border border-white/[0.07] bg-surface/60 p-6 backdrop-blur">
+            <BentoCard key={group.name} accent={group.accent} className="sm:p-6">
               <h3
                 className={`font-mono text-sm ${group.accent === 'orange' ? 'text-brand-orange' : 'text-brand-green'}`}
               >
@@ -39,7 +40,7 @@ export function Technologies() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </BentoCard>
           ))}
         </div>
       </div>

@@ -23,15 +23,19 @@ export function Hero() {
           </div>
 
           <h1 className="text-5xl leading-[1.05] font-extrabold tracking-tight text-balance text-white sm:text-6xl lg:text-7xl">
-            Ingeniería de software{' '}
+            Tecnología que{' '}
             <span className="bg-gradient-to-r from-brand-green to-brand-orange bg-clip-text text-transparent">
-              de punta a punta
+              impulsa tu negocio
             </span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-pretty text-muted-foreground">
-            Convertimos requerimientos complejos en arquitectura limpia y escalable: desde el
-            primer boceto hasta sistemas en producción que tu equipo disfrutará mantener.
+          <p className="mt-6 text-xl font-semibold text-white sm:text-2xl">
+            Ingeniería de software de punta a punta.
+          </p>
+
+          <p className="mt-4 max-w-xl text-lg leading-relaxed text-pretty text-muted-foreground">
+            Diseñamos y desarrollamos software a medida: desde la idea hasta producción, con
+            arquitectura preparada para crecer.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -39,7 +43,7 @@ export function Hero() {
               href="#contacto"
               className="group inline-flex items-center justify-center gap-2 rounded-lg bg-brand-orange px-6 py-3 text-base font-semibold text-background transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_32px_-2px_rgba(255,107,0,0.75)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
             >
-              Contactanos
+              Hablemos de tu proyecto
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
             </a>
             <a
@@ -81,10 +85,10 @@ export function Hero() {
 
           <div className="relative">
             <Image
-              src="/images/kuati-ar-hero.webp"
-              alt="Kuati, la mascota de Kuatech: un coatí 3D con lentes de realidad aumentada y cola rayada luminosa, programando en una laptop"
-              width={484}
-              height={470}
+              src="/images/kuati-mate.webp"
+              alt="Kuati, la mascota de Kuatech: un coatí 3D con lentes de realidad aumentada y cola rayada luminosa, tomando mate frente a su laptop Kuatech"
+              width={1024}
+              height={1047}
               priority
               sizes="(min-width: 1024px) 384px, (min-width: 640px) 320px, 200px"
               className="animate-float relative h-auto w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"

@@ -41,10 +41,10 @@ export function Manifesto() {
           <div className="relative mx-auto w-56 sm:w-72 lg:w-full">
             <div aria-hidden="true" className="absolute inset-[10%] rounded-full bg-brand-green/15 blur-3xl" />
             <Image
-              src="/images/kuati-mate.webp"
-              alt="Kuati tomando mate frente a su laptop, pensando en cómo resolver un problema"
-              width={997}
-              height={1019}
+              src="/images/kuati-ar-hero.webp"
+              alt="Kuati programando en su laptop Kuatech, pensando en cómo resolver un problema"
+              width={1009}
+              height={1024}
               sizes="(min-width: 1024px) 380px, (min-width: 640px) 288px, 224px"
               className="relative h-auto w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
             />

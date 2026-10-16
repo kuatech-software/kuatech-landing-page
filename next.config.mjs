@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Oculta el indicador flotante de Next.js en desarrollo
+  devIndicators: false,
   images: {
     formats: ['image/avif', 'image/webp'],
   },

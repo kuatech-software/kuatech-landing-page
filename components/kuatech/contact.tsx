@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import { ArrowRight, Mail, MessageCircle } from 'lucide-react'
-import { EMAIL_HREF, SITE, WHATSAPP_HREF } from '@/lib/site'
+import { ArrowRight, MessageCircle } from 'lucide-react'
+import { WHATSAPP_HREF } from '@/lib/site'
+import { ContactForm } from './contact-form'
 
 export function Contact() {
   return (
@@ -13,8 +14,8 @@ export function Contact() {
         <Image
           src="/images/kuati-waving.webp"
           alt="Kuati saludando con un celular en la mano"
-          width={789}
-          height={865}
+          width={992}
+          height={1088}
           sizes="(min-width: 640px) 176px, 144px"
           className="mx-auto mb-6 h-auto w-36 drop-shadow-[0_16px_32px_rgba(0,0,0,0.5)] sm:w-44"
         />
@@ -26,25 +27,21 @@ export function Contact() {
           Contanos qué querés construir. Te respondemos rápido y sin compromiso.
         </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href={WHATSAPP_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center gap-2 rounded-lg bg-brand-orange px-6 py-3 text-base font-semibold text-background transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_32px_-2px_rgba(255,107,0,0.75)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
-          >
-            <MessageCircle className="size-4" aria-hidden="true" />
-            Escribinos por WhatsApp
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-          </a>
-          <a
-            href={EMAIL_HREF}
-            className="inline-flex items-center justify-center gap-2 rounded-lg border border-brand-green/40 px-6 py-3 text-base font-medium text-brand-green transition-colors hover:bg-brand-green/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
-          >
-            <Mail className="size-4" aria-hidden="true" />
-            {SITE.email}
-          </a>
+        <div className="mt-10">
+          <ContactForm />
         </div>
+
+        <p className="mt-8 text-sm text-muted-foreground">¿Preferís algo más directo?</p>
+        <a
+          href={WHATSAPP_HREF}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group mt-3 inline-flex items-center justify-center gap-2 rounded-lg border border-brand-green/40 px-6 py-3 text-base font-medium text-brand-green transition-colors hover:bg-brand-green/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
+        >
+          <MessageCircle className="size-4" aria-hidden="true" />
+          Escribinos por WhatsApp
+          <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+        </a>
       </div>
     </section>
   )

@@ -13,7 +13,7 @@ export function Logo() {
       <span className="flex flex-col leading-none">
         <span className="text-lg font-bold tracking-tight text-brand-orange">Kuatech</span>
         <span className="mt-0.5 font-mono text-[10px] tracking-wide text-muted-foreground">
-          software factory
+          software &amp; saas
         </span>
       </span>
     </Link>

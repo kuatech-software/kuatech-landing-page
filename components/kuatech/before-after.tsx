@@ -1,4 +1,5 @@
 import { Check, X } from 'lucide-react'
+import { BentoCard } from './bento-card'
 import { SectionHeading } from './section-heading'
 
 const without = [
@@ -29,7 +30,7 @@ export function BeforeAfter() {
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-white/[0.07] bg-surface/40 p-6 sm:p-8">
+          <BentoCard accent="orange" className="bg-surface/40">
             <p className="font-mono text-sm text-muted-foreground">{'sin_kuatech'}</p>
             <ul className="mt-6 space-y-4">
               {without.map((item) => (
@@ -41,9 +42,12 @@ export function BeforeAfter() {
                 </li>
               ))}
             </ul>
-          </div>
+          </BentoCard>
 
-          <div className="relative rounded-2xl border border-brand-green/30 bg-brand-green/[0.04] p-6 shadow-[0_0_48px_-16px_rgba(16,185,129,0.45)] sm:p-8">
+          <BentoCard
+            accent="green"
+            className="border-brand-green/30 bg-brand-green/[0.04] shadow-[0_0_48px_-16px_rgba(16,185,129,0.45)] hover:border-brand-green/60 hover:shadow-[0_0_64px_-12px_rgba(16,185,129,0.6)]"
+          >
             <p className="font-mono text-sm text-brand-green">{'con_kuatech'}</p>
             <ul className="mt-6 space-y-4">
               {withKuatech.map((item) => (
@@ -55,7 +59,7 @@ export function BeforeAfter() {
                 </li>
               ))}
             </ul>
-          </div>
+          </BentoCard>
         </div>
       </div>
     </section>

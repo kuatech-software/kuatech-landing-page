@@ -16,7 +16,7 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 })
 
-const title = 'Kuatech — Software Factory en Misiones, Argentina'
+const title = 'Kuatech — Software & SaaS'
 const description =
   'Kuatech es una software factory que convierte requerimientos complejos en arquitectura limpia: desarrollo full-stack y apps móviles, APIs y microservicios, e infraestructura DevOps en la nube.'
 
