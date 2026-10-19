@@ -76,23 +76,30 @@ export function Hero() {
           {/* Glows: naranja detrás de la cola, verde del lado de la laptop */}
           <div
             aria-hidden="true"
-            className="absolute top-[5%] -left-[15%] size-[70%] rounded-full bg-brand-orange/30 blur-3xl"
+            className="animate-glow-breathe absolute top-[5%] -left-[15%] size-[70%] rounded-full bg-brand-orange/30 blur-3xl"
           />
           <div
             aria-hidden="true"
-            className="absolute top-[30%] -right-[15%] size-[65%] rounded-full bg-brand-green/20 blur-3xl"
+            className="animate-glow-breathe-slow absolute top-[30%] -right-[15%] size-[65%] rounded-full bg-brand-green/20 blur-3xl"
           />
 
           <div className="relative">
-            <Image
-              src="/images/kuati-mate.webp"
-              alt="Kuati, la mascota de Kuatech: un coatí 3D con lentes de realidad aumentada y cola rayada luminosa, tomando mate frente a su laptop Kuatech"
-              width={1024}
-              height={1047}
-              priority
-              sizes="(min-width: 1024px) 384px, (min-width: 640px) 320px, 200px"
-              className="animate-float relative h-auto w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
-            />
+            <div className="animate-float relative">
+              {/* Luz de la cola: late junto con el personaje */}
+              <div
+                aria-hidden="true"
+                className="animate-glow-breathe absolute top-[4%] left-[2%] h-[80%] w-[32%] rounded-full bg-brand-orange/35 blur-2xl"
+              />
+              <Image
+                src="/images/kuati-mate.webp"
+                alt="Kuati, la mascota de Kuatech: un coatí 3D con lentes de realidad aumentada y cola rayada luminosa, tomando mate frente a su laptop Kuatech"
+                width={1024}
+                height={1047}
+                priority
+                sizes="(min-width: 1024px) 384px, (min-width: 640px) 320px, 200px"
+                className="relative h-auto w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              />
+            </div>
             {/* Sombra de piso que acompaña la flotación */}
             <div
               aria-hidden="true"

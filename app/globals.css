@@ -104,6 +104,19 @@
   }
 }
 
+/* Brillo que "respira" detrás de la cola y la laptop */
+@keyframes glow-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
 @keyframes float-shadow {
   0%,
   100% {
@@ -128,13 +141,23 @@
   animation: float 6s ease-in-out infinite;
 }
 
+@utility animate-glow-breathe {
+  animation: glow-breathe 3.2s ease-in-out infinite;
+}
+
+@utility animate-glow-breathe-slow {
+  animation: glow-breathe 4.6s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .animate-pulse-dot,
   .animate-float,
-  .animate-float-shadow {
+  .animate-float-shadow,
+  .animate-glow-breathe,
+  .animate-glow-breathe-slow {
     animation: none;
   }
 }
