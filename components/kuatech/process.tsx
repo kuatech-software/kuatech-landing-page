@@ -4,22 +4,22 @@ const steps = [
   { title: 'Descubrimiento', text: 'Entendemos el problema, a los usuarios y qué significa el éxito para tu negocio.' },
   { title: 'Diseño', text: 'Definimos arquitectura, alcance y un prototipo para validar antes de construir.' },
   { title: 'Desarrollo', text: 'Trabajamos en ciclos cortos con demos frecuentes y código testeado.' },
-  { title: 'Entrega', text: 'Puesta en producción con pipelines automatizados y documentación.' },
-  { title: 'Evolución', text: 'Soporte, monitoreo y mejoras continuas a medida que tu producto crece.' },
+  { title: 'Entrega', text: 'Lo ponemos en marcha, automatizado y documentado.' },
+  { title: 'Evolución', text: 'Si lo necesitás, seguimos con soporte y mejoras a medida que tu negocio crece.' },
 ]
 
 export function Process() {
   return (
-    <section id="proceso" className="scroll-mt-20 border-t border-white/5 py-24 lg:py-32">
+    <section id="proceso" className="scroll-mt-20 border-t border-white/5 py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="proceso"
           accent="orange"
-          title="De la idea a producción, sin sorpresas."
+          title="Paso a paso, sin sorpresas."
           description="Un camino claro en cinco pasos, con visibilidad en cada etapa."
         />
 
-        <ol className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+        <ol className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
           {steps.map((step, i) => (
             <li
               key={step.title}

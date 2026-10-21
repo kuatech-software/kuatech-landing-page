@@ -3,7 +3,7 @@ import { SectionHeading } from './section-heading'
 const faqs = [
   {
     q: '¿Cómo empiezo un proyecto con Kuatech?',
-    a: 'Escribinos por WhatsApp o email contando tu idea. Agendamos una conversación sin costo para entender el problema y proponerte un camino.',
+    a: 'Escribinos por el formulario o por WhatsApp contando tu idea. Agendamos una conversación sin costo para entender el problema y proponerte un camino.',
   },
   {
     q: '¿Trabajan con startups y emprendedores?',
@@ -15,7 +15,11 @@ const faqs = [
   },
   {
     q: '¿Dan soporte después de la entrega?',
-    a: 'Sí, con el modelo de soporte y evolución: mantenimiento, monitoreo y mejoras continuas.',
+    a: 'Sí, si lo necesitás. Acordamos un plan mensual con un alcance definido; los cambios grandes se cotizan aparte.',
+  },
+  {
+    q: '¿Hacen apps para celular?',
+    a: 'Desarrollamos sistemas web pensados primero para el celular: se ven y funcionan bien en cualquier dispositivo, sin que tus usuarios tengan que instalar nada.',
   },
   {
     q: '¿Trabajan con clientes de otras provincias o países?',
@@ -25,11 +29,11 @@ const faqs = [
 
 export function Faq() {
   return (
-    <section id="faq" className="scroll-mt-20 border-t border-white/5 py-24 lg:py-32">
+    <section id="faq" className="scroll-mt-20 border-t border-white/5 py-16 lg:py-20">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="faq" title="Preguntas frecuentes." />
 
-        <div className="mt-12 divide-y divide-white/5 rounded-2xl border border-white/[0.07] bg-surface/60 backdrop-blur">
+        <div className="mt-10 divide-y divide-white/5 rounded-2xl border border-white/[0.07] bg-surface/60 backdrop-blur">
           {faqs.map((item) => (
             <details key={item.q} className="group p-5 sm:p-6">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-md font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-green [&::-webkit-details-marker]:hidden">

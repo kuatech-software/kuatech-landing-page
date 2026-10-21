@@ -48,7 +48,7 @@ const products: Product[] = [
 
 export function Lab() {
   return (
-    <section id="laboratorio" className="scroll-mt-20 border-t border-white/5 py-24 lg:py-32">
+    <section id="laboratorio" className="scroll-mt-20 border-t border-white/5 py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="laboratorio"
@@ -56,7 +56,7 @@ export function Lab() {
           description="Además de desarrollar para terceros, creamos nuestros propios productos. Estos son los que están en marcha, con su estado real."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {products.map((p) => (
             <BentoCard key={p.name} accent={p.accent}>
               <div className="flex items-center justify-between gap-3">
@@ -90,6 +90,17 @@ export function Lab() {
             </BentoCard>
           ))}
         </div>
+
+        <p className="mx-auto mt-10 max-w-2xl text-center leading-relaxed text-muted-foreground">
+          Todavía no están disponibles. ¿Alguno resuelve un problema de tu negocio?{' '}
+          <a
+            href="#contacto"
+            className="font-medium text-brand-orange underline-offset-4 transition-colors hover:text-brand-orange/80 hover:underline"
+          >
+            Contactanos
+          </a>{' '}
+          y te contamos más.
+        </p>
       </div>
     </section>
   )

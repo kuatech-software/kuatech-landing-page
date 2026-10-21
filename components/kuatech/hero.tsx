@@ -15,7 +15,7 @@ export function Hero() {
         aria-hidden="true"
         className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]"
       />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pt-10 pb-24 sm:px-6 md:pt-24 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pt-28 lg:pb-32">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pt-10 pb-16 sm:px-6 md:pt-24 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pt-28 lg:pb-20">
         <div className="flex flex-col items-start">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-green/30 bg-brand-green/5 px-3 py-1 font-mono text-xs text-brand-green backdrop-blur">
             <span className="animate-pulse-dot size-1.5 rounded-full bg-brand-green shadow-[0_0_8px_rgba(16,185,129,0.9)]" />
@@ -34,8 +34,8 @@ export function Hero() {
           </p>
 
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-pretty text-muted-foreground">
-            Diseñamos y desarrollamos software a medida: desde la idea hasta producción, con
-            arquitectura preparada para crecer.
+            Diseñamos y desarrollamos software a medida: desde la idea hasta tu sistema funcionando,
+            preparado para crecer con tu negocio.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -57,8 +57,8 @@ export function Hero() {
 
           <dl className="mt-14 grid w-full max-w-lg grid-cols-3 gap-4 border-t border-white/5 pt-8 sm:gap-6">
             {[
-              { value: 'Full-stack', label: 'Un solo equipo' },
-              { value: 'CI/CD', label: 'Entregas automatizadas' },
+              { value: 'Directo', label: 'Sin intermediarios' },
+              { value: 'A medida', label: 'Para tu negocio' },
               { value: 'Misiones', label: 'Hecho en Argentina' },
             ].map((stat) => (
               <div key={stat.label}>

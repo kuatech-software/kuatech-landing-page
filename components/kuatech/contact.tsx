@@ -5,7 +5,7 @@ import { ContactForm } from './contact-form'
 
 export function Contact() {
   return (
-    <section id="contacto" className="relative scroll-mt-20 overflow-hidden border-t border-white/5 py-24 lg:py-32">
+    <section id="contacto" className="relative scroll-mt-20 overflow-hidden border-t border-white/5 py-16 lg:py-20">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 left-1/2 h-72 w-[40rem] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-brand-green/10 to-brand-orange/10 blur-3xl"
