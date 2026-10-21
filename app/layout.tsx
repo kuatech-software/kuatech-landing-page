@@ -18,7 +18,7 @@ const jetbrains = JetBrains_Mono({
 
 const title = 'Kuatech — Software & SaaS'
 const description =
-  'Kuatech es una software factory que convierte requerimientos complejos en arquitectura limpia: desarrollo full-stack y apps móviles, APIs y microservicios, e infraestructura DevOps en la nube.'
+  'Kuatech es una software factory de Misiones, Argentina. Desarrollamos sistemas web a medida, integraciones y modernización de sistemas, de la idea a la puesta en marcha.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

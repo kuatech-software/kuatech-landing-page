@@ -1,23 +1,23 @@
-import { Handshake, Users, Wrench } from 'lucide-react'
+import { RefreshCw, Rocket, Wrench } from 'lucide-react'
 import { BentoCard } from './bento-card'
 import { SectionHeading } from './section-heading'
 
 const models = [
   {
-    title: 'Proyecto cerrado',
-    text: 'Alcance, plazo y entregables definidos desde el inicio. Ideal para un MVP o un producto con requisitos claros.',
-    icon: <Handshake className="size-5" aria-hidden="true" />,
+    title: 'Proyecto nuevo',
+    text: 'Un sistema desde cero, pensado para tu negocio. Definimos alcance, plazos y entregables antes de arrancar.',
+    icon: <Rocket className="size-5" aria-hidden="true" />,
     accent: 'orange' as const,
   },
   {
-    title: 'Equipo dedicado',
-    text: 'Desarrolladores que se suman a tu equipo y trabajan con tus prioridades, con flexibilidad para crecer o reducir.',
-    icon: <Users className="size-5" aria-hidden="true" />,
+    title: 'Modernización',
+    text: 'Le damos una segunda vida a tu sistema actual: lo llevamos a tecnología moderna sin frenar tu operación.',
+    icon: <RefreshCw className="size-5" aria-hidden="true" />,
     accent: 'green' as const,
   },
   {
-    title: 'Soporte y evolución',
-    text: 'Mantenimiento mensual, monitoreo y mejoras continuas para un sistema que ya está en producción.',
+    title: 'Mantenimiento y soporte',
+    text: 'Para sistemas que ya funcionan: correcciones, mejoras y actualizaciones con un plan mensual de alcance definido.',
     icon: <Wrench className="size-5" aria-hidden="true" />,
     accent: 'orange' as const,
   },
@@ -25,16 +25,16 @@ const models = [
 
 export function Engagement() {
   return (
-    <section id="modelos" className="scroll-mt-20 border-t border-white/5 py-24 lg:py-32">
+    <section id="modelos" className="scroll-mt-20 border-t border-white/5 py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="modelos de trabajo"
+          eyebrow="propuestas"
           accent="orange"
-          title="Elegí cómo trabajamos juntos."
-          description="Tres formatos pensados para distintas etapas. Contanos tu caso y armamos la propuesta."
+          title="¿En qué etapa está tu proyecto?"
+          description="Cada caso arranca distinto. Contanos el tuyo y armamos una propuesta a medida."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {models.map((m) => (
             <BentoCard key={m.title} accent={m.accent}>
               <span

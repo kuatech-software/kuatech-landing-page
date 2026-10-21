@@ -8,7 +8,7 @@ const values = [
 
 export function Manifesto() {
   return (
-    <section id="manifesto" className="relative scroll-mt-20 overflow-hidden border-t border-white/5 py-28 lg:py-40">
+    <section id="manifesto" className="relative scroll-mt-20 overflow-hidden border-t border-white/5 py-20 lg:py-24">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 left-1/2 h-72 w-[40rem] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-brand-green/10 to-brand-orange/10 blur-3xl"

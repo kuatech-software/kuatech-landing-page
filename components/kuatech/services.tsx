@@ -1,26 +1,31 @@
 import { Braces, Cloud, Code2, Layers, Network, Smartphone, Server, GitBranch } from 'lucide-react'
 import { BentoCard } from './bento-card'
 import { NodeGraph } from './node-graph'
-import { ServerMetrics } from './server-metrics'
+import { LaunchChecklist } from './launch-checklist'
 
-const stackTags = ['.NET', 'Angular', 'React', 'TypeScript', 'SQL Server', 'PostgreSQL']
+const examples = [
+  'Sistemas de gestión y stock',
+  'Portales para tus clientes',
+  'Turnos, reservas y pedidos',
+  'Tableros con tus números al día',
+]
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-20 py-24 lg:py-32">
+    <section id="services" className="scroll-mt-20 py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="font-mono text-sm text-brand-green">{'// nuestros servicios'}</p>
           <h2 className="mt-3 text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl">
-            Ingeniería en todo el stack.
+            De la idea al sistema funcionando.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Un solo equipo, responsable desde la interfaz hasta la infraestructura. Sin traspasos,
-            sin huecos.
+            Diseñamos, construimos y ponemos en marcha tu sistema. Un único responsable de punta a
+            punta, sin pasarte de un proveedor a otro.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
           <BentoCard className="md:col-span-2" accent="orange">
             <div className="flex items-center gap-3">
               <IconBadge accent="orange">
@@ -33,26 +38,27 @@ export function Services() {
                 <Layers className="size-5" aria-hidden="true" />
               </IconBadge>
             </div>
-            <h3 className="mt-6 text-2xl font-semibold text-white">Desarrollo Full-Stack y Apps Móviles</h3>
-            <p className="mt-3 max-w-lg leading-relaxed text-muted-foreground">
-              Plataformas web impecables y apps móviles con experiencia nativa, construidas sobre
-              código tipado, testeado y documentado, pensado para crecer junto a tu producto.
+            <h3 className="mt-6 text-2xl font-semibold text-white">Sistemas web a medida</h3>
+            <p className="mt-3 mb-8 max-w-lg leading-relaxed text-muted-foreground">
+              Desde el sistema de gestión de tu empresa hasta la plataforma que usan tus clientes.
+              Funciona en la compu, la tablet y el celular, y está preparado para crecer junto a tu
+              negocio.
             </p>
 
-            <ul className="mt-6 flex flex-wrap gap-2" aria-label="Tecnologías">
-              {stackTags.map((tag) => (
-                <li
-                  key={tag}
-                  className="rounded-md border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-xs text-muted-foreground transition-colors group-hover:border-brand-orange/30"
-                >
-                  {tag}
+            <ul className="mb-8 grid gap-x-6 gap-y-2 font-mono text-sm text-muted-foreground sm:grid-cols-2">
+              {examples.map((e) => (
+                <li key={e} className="flex gap-2">
+                  <span aria-hidden="true" className="text-brand-orange">
+                    &gt;
+                  </span>
+                  {e}
                 </li>
               ))}
             </ul>
 
             <div
               aria-hidden="true"
-              className="mt-8 overflow-hidden rounded-xl border border-white/5 bg-background/80 p-4 font-mono text-xs leading-relaxed sm:text-sm"
+              className="mt-auto overflow-hidden rounded-xl border border-white/5 bg-background/80 p-4 font-mono text-xs leading-relaxed sm:text-sm"
             >
               <div className="text-muted-foreground">
                 <span className="text-brand-orange">export</span>{' '}
@@ -81,10 +87,11 @@ export function Services() {
                 <Braces className="size-5" aria-hidden="true" />
               </IconBadge>
             </div>
-            <h3 className="mt-6 text-2xl font-semibold text-white">Arquitectura de APIs y Microservicios</h3>
+            <h3 className="mt-6 text-2xl font-semibold text-white">Integramos tus sistemas</h3>
             <p className="mt-3 leading-relaxed text-muted-foreground">
-              APIs resilientes y bien versionadas, y servicios orientados a eventos con contratos
-              claros y límites observables.
+              Conectamos tu sistema con lo que ya usás: facturación electrónica de ARCA, Mercado Pago,
+              tu tienda online o tu sistema de gestión. Los datos pasan solos y nadie tiene que
+              cargarlos dos veces.
             </p>
             <NodeGraph />
           </BentoCard>
@@ -103,13 +110,13 @@ export function Services() {
                     <GitBranch className="size-5" aria-hidden="true" />
                   </IconBadge>
                 </div>
-                <h3 className="mt-6 text-2xl font-semibold text-white">DevOps e Infraestructura Cloud</h3>
+                <h3 className="mt-6 text-2xl font-semibold text-white">Puesta en marcha y soporte</h3>
                 <p className="mt-3 max-w-md leading-relaxed text-muted-foreground">
-                  Infraestructura como código, pipelines CI/CD automatizados y observabilidad en
-                  producción, para que cada release sea aburrido en el mejor sentido.
+                  Dejamos tu sistema funcionando en tu propia nube, documentado y con copias de
+                  seguridad. Si querés, sumás un plan de soporte mensual con un alcance claro.
                 </p>
               </div>
-              <ServerMetrics />
+              <LaunchChecklist />
             </div>
           </BentoCard>
         </div>

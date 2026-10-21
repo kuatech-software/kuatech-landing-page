@@ -5,22 +5,22 @@ import { SectionHeading } from './section-heading'
 const without = [
   'Sistemas legacy que nadie se anima a tocar.',
   'Entregas que se atrasan y presupuestos que se estiran.',
-  'Deploys manuales y miedo en cada release.',
+  'Actualizaciones a mano y miedo cada vez que se cambia algo.',
   'Código sin tests ni documentación.',
-  'Un proveedor distinto para cada capa del sistema.',
+  'Un proveedor distinto para cada parte del sistema.',
 ]
 
 const withKuatech = [
   'Arquitectura limpia y migraciones planificadas, sin frenar la operación.',
   'Ciclos cortos, demos frecuentes y visibilidad real del avance.',
-  'CI/CD: cada release automatizado, repetible y reversible.',
+  'Actualizaciones automáticas, seguras y reversibles.',
   'Código testeado, documentado y que es tuyo.',
-  'Un solo equipo, desde la interfaz hasta la infraestructura.',
+  'Un único responsable, de la idea a la puesta en marcha.',
 ]
 
 export function BeforeAfter() {
   return (
-    <section id="por-que" className="scroll-mt-20 border-t border-white/5 py-24 lg:py-32">
+    <section id="por-que" className="scroll-mt-20 border-t border-white/5 py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="por qué kuatech"
@@ -29,7 +29,7 @@ export function BeforeAfter() {
           description="Lo que cambia cuando el mismo equipo se hace cargo del sistema de punta a punta."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           <BentoCard accent="orange" className="bg-surface/40">
             <p className="font-mono text-sm text-muted-foreground">{'sin_kuatech'}</p>
             <ul className="mt-6 space-y-4">
