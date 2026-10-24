@@ -1,6 +1,6 @@
-import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
+import { CloudflareAnalytics } from '@/components/kuatech/cloudflare-analytics'
 import { SITE, SITE_URL } from '@/lib/site'
 import './globals.css'
 
@@ -88,7 +88,7 @@ export default function RootLayout({
           }}
         />
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <CloudflareAnalytics />
       </body>
     </html>
   )
