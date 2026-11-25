@@ -1,4 +1,4 @@
-import { Bus, FileCheck2, Hammer, Wheat } from 'lucide-react'
+import { Bus, FileCheck2, HardHat, Scale } from 'lucide-react'
 import { BentoCard } from './bento-card'
 import { SectionHeading } from './section-heading'
 
@@ -13,36 +13,41 @@ type Product = {
 
 const products: Product[] = [
   {
+    name: 'ObraCom',
+    status: 'En desarrollo',
+    tagline: 'Gestión integral de obras para constructoras: cada obra, sus números y su avance en un solo lugar.',
+    features: [
+      'Centro de Obra: presupuesto, gastos, acopios y documentos',
+      'Gastos reales vs. presupuesto',
+      'Bitácora de obra desde el celular',
+      'Comitentes, insumos y tablero de control',
+    ],
+    accent: 'orange',
+    icon: <HardHat className="size-5" aria-hidden="true" />,
+  },
+  {
     name: 'Emití',
     status: 'En desarrollo',
-    tagline: 'Facturación electrónica con ARCA, lista para integrar como API.',
+    tagline: 'Facturación electrónica con ARCA: el motor que integran nuestros productos.',
     features: ['Emisión de comprobantes y CAE', 'Homologación y producción separadas', 'Auditoría y trazabilidad', 'Manejo seguro de credenciales'],
-    accent: 'orange',
+    accent: 'green',
     icon: <FileCheck2 className="size-5" aria-hidden="true" />,
   },
   {
+    name: 'Conciliador IA',
+    status: 'En validación',
+    tagline: 'Conciliación automática para estudios contables y pymes, sin planillas a mano.',
+    features: ['Extractos bancarios', 'Movimientos de Mercado Pago', 'Comprobantes de ARCA', 'Diferencias detectadas y explicadas'],
+    accent: 'green',
+    icon: <Scale className="size-5" aria-hidden="true" />,
+  },
+  {
     name: 'Convoy',
-    status: 'En diseño',
+    status: 'En exploración',
     tagline: 'Eficiencia operativa para flotas de transporte, complementando tu GPS.',
     features: ['Combustible y consumo por km', 'Mantenimiento y vencimientos', 'Costo por vehículo y por viaje', 'Alertas e indicadores de rentabilidad'],
-    accent: 'green',
-    icon: <Bus className="size-5" aria-hidden="true" />,
-  },
-  {
-    name: 'MasaMadre',
-    status: 'En exploración',
-    tagline: 'Producción y distribución para cadenas de panaderías.',
-    features: ['Producción y recetas con costos', 'Stock por sucursal', 'Control de merma', 'Predicción de demanda'],
-    accent: 'green',
-    icon: <Wheat className="size-5" aria-hidden="true" />,
-  },
-  {
-    name: 'Pañol',
-    status: 'En exploración',
-    tagline: 'Gestión simple para ferreterías, sin la complejidad de un ERP.',
-    features: ['Stock, compras y proveedores', 'Ventas, caja y reportes', 'Facturación electrónica ARCA', 'Operación local con sincronización'],
     accent: 'orange',
-    icon: <Hammer className="size-5" aria-hidden="true" />,
+    icon: <Bus className="size-5" aria-hidden="true" />,
   },
 ]
 
